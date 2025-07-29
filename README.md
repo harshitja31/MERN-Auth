@@ -4,7 +4,7 @@ A full-stack authentication system built using the MERN stack (MongoDB, Express.
 
 ## 🌐 Live Links
 
-- **Frontend:** [Frontend on Render](https://your-frontend-url.onrender.com)
+- **Frontend:** [Frontend on Render](https://mern-auth-muh7.onrender.com)
 - **Backend:** [Backend on Render](https://mern-auth-backend-vqan.onrender.com)
 
 ## 📦 Tech Stack
