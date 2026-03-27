@@ -8,14 +8,22 @@ import userRouter from './routes/userRoute.js';
 
 const app = express();
 
-const allowedOrigin = ["http://localhost:5173"]
+const allowedOrigin = [
+  "http://localhost:5173",
+  "https://your-frontend-url.vercel.app"
+]
 connectDB();
 
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({credentials: true, origin: allowedOrigin}));
+app.use(cors({
+    origin: allowedOrigin,
+    credentials: true,
+    methods:["GET","POST","PUT","DELETE"],
+    allowedHeaders:["Content-Type","Authorization"]
+}));
 
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter)
